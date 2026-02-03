@@ -58,7 +58,7 @@ public:
 
         assert(num_Devs == NUM_DEVFILES);
 
-        // Init_Raid(vstdfiles);
+        Init_Raid(vstdfiles);
 
         s_encodemod = new SEncodeMod(num_datas, num_paritys, SCHUNK_SIZE, v_stdfiles, meta_mod);
         s_decodemod = new SDecodeMod(num_datas, num_paritys, SCHUNK_SIZE, v_stdfiles, meta_mod);

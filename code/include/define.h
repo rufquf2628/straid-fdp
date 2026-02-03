@@ -21,12 +21,16 @@ using namespace std;
 
 #define FULLSIZE (DATACHUNK_NUM * SCHUNK_SIZE)
 #define PARTSIZE (SCHUNK_SIZE)
-#define DATACHUNK_NUM (5)                              // Number of data chunks
-#define PARITYCHUNK_NUM (1)                            // Number of parity chunks
+
+//#define DATACHUNK_NUM (5)                              // Number of data chunks
+//#define PARITYCHUNK_NUM (1)                            // Number of parity chunks
+#define DATACHUNK_NUM (2)
+#define PARITYCHUNK_NUM (1)
+
 #define NUM_DEVFILES (DATACHUNK_NUM + PARITYCHUNK_NUM) 
 #define NUM_WORKERS NUM_THREADS                        // Number of RAID worker threads
 
-#define NUM_THREADS (32)
+#define NUM_THREADS (64)
 #define DATASET_SIZE (1 * GB)
 #define LOOP (2) // workload loop num
 #define USER_SPACE_LEN (50 * GB)

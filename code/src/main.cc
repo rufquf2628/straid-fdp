@@ -47,14 +47,15 @@ int main(int argc, char *argv[])
     printf("This System has %d Processors\n", cpus);
 
     // paths of raw SSD devices or SSD partations
-    string lfile0 = "/dev/nvme0n1p4";
-    string lfile1 = "/dev/nvme1n1p4";
-    string lfile2 = "/dev/nvme2n1p4";
-    string lfile3 = "/dev/nvme3n1p4";
-    string lfile4 = "/dev/nvme4n1p4";
-    string lfile5 = "/dev/nvme5n1p4";
-    vector<string> v_fileset{lfile0, lfile1, lfile2, lfile3, lfile4, lfile5};
-    assert(NUM_DEV <= v_fileset.size());
+    string lfile0 = "/dev/nvme0n1";
+    string lfile1 = "/dev/nvme1n1";
+    string lfile2 = "/dev/nvme2n1";
+    //string lfile3 = "/dev/nvme3n1p4";
+    //string lfile4 = "/dev/nvme4n1p4";
+    //string lfile5 = "/dev/nvme5n1p4";
+    //vector<string> v_fileset{lfile0, lfile1, lfile2, lfile3, lfile4, lfile5};
+    vector<string> v_fileset{lfile0, lfile1, lfile2};
+	assert(NUM_DEV <= v_fileset.size());
 
     vector<int> v_logfd;
     for (size_t i = 0; i < v_fileset.size(); i++)
